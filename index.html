@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Open+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<header class="header">
+ <div class="container">
+    <div class="header__inner">
+        <!-- Меню -->
+        <nav class="menu">
+            <!-- Навигация при ширине меньше 1000px -->
+            <button class="menu__btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu__list">
+              <li class="menu__close">
+                <button class="menu__close-btn">
+                    <img src="images/close.png" alt="">
+                </button>
+              </li>
+                <li class="menu__item">
+                    <a href="office.html" class="menu__link active">Достижения компании</a>
+                </li>
+                <li class="menu__item">
+                    <a href="history.html" class="menu__link active">История компании</a>
+                </li>
+                <li class="menu__item">
+                    <a href="hr.html" class="menu__link active">Руководители компании</a>
+                </li>
+               
+                <li class="menu__item">
+                    <a href="#" class="menu__link active">Автомобили ></a>
+                        <ul>
+                            <li><a href="first.html">Первые автомобили</a></li>
+                            <li><a href="classic.html">Классические модели</a></li>
+                            <li><a href="modern.html">Современные модели</a></li>
+                            <li><a href="m-sport.html">M модели</a></li>
+                            <li><a href="electro.html">Электрические модели</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </nav>
+         <!-- Картинка домашней страницы -->
+        <a href="index.html" class="logo">
+            <img src="images/logo.png">
+        </a>
+    </div>
+ </div>
+</header>
+<!-- Загаловок -->
+<main class="main">
+<div class="full-screen">
+    <div class="full-screen_body">
+        <div class="full-screen_title"><h3> ИСТОРИЯ КОМПАНИИ BMW</h3></div>
+        <div class="full-screen_text"><p>История BMW Group берет свое начало в 1916 году. Сегодня четыре бренда BMW, MINI, Rolls-Royce и BMW Motorrad делают BMW Group одним из ведущих мировых поставщиков автомобилей, мотоциклов и транспортных услуг премиум-класса.</p></div>
+        <div class="top__history">
+            <a href="history.html"> Узнать больше</a>
+        </div>
+    </div>
+    <video autoplay muted loop preload="auto" class="full-screen_video">
+        <source type="video/mp4" src="evo.mp4">
+    </video>
+ </div>
+<blockquote class="blockquote">
+    <p class="blockquote__text">
+        «BMW - С удовольствием за рулем»
+    </p>
+</blockquote>
+<!-- Слайдер с ссылками на автомобили -->
+<swiper-container class="mySwiper"  effect="coverflow" grab-cursor="true" centered-slides="true"
+    slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+    <div class="gallery_item swiper-slide">
+        <img src="images/first.png" />
+        <div class="text">
+            <h3 class="begin">Первые автомобили с 1928-1968</h3>
+            <p>
+                BMW стала производителем автомобилей в 1928 году, когда приобрела Fahrzeugfabrik Eisenach, которая производила Austin Sevens
+
+            </p>
+            <a href="first.html">посмотреть</a>
+        </div>
+      </div>
+      <div class="gallery_item swiper-slide">
+     <img src="images/classic.png" />
+        <div class="text">
+            <h3 class="begin">Классические модели 1972-1994</h3>
+            <p>
+                Первое поколение седанов среднего размера BMW 5 Series было представлено в 1972 году, чтобы заменить седаны нового класса. 
+            </p>
+            <a href="classic.html">посмотреть</a>
+        </div>
+</div>
+<div class="gallery_item swiper-slide">
+     <img src="images/modern.png" />
+      
+          <div class="text">
+            <h3 class="begin">Современные модели 1994-2023</h3>
+            <p>
+                В 1994 году BMW купила британскую Rover Group (которая на тот момент состояла из Rover, Land Rover, Бренды Mini и MG, а также права на прекращение существования Austin брендов и Morris) и владел им в течение шести лет.
+
+            </p>
+            <a href="modern.html">посмотреть</a>
+        </div>
+</div>
+<div class="gallery_item swiper-slide">
+     <img src="images/m5.png" />
+          <div class="text">
+            <h3 class="begin">M модели</h3>
+            <p>
+                BMW M («M» означает «автоспорт») изначально был создан для облегчения гоночной программы BMW, которая была очень успешной в 1960-х и 1970-х годах.
+
+            </p>
+            <a href="m-sport.html">посмотреть</a>
+        </div>
+</div>
+<div class="gallery_item swiper-slide">
+     <img src="images/electro.png" />
+          <div class="text">
+            <h3 class="begin">Электрические модели</h3>
+            <p>
+                В В феврале 2011 года BMW объявила о создании нового суббренда BMW i для продвижения автомобилей, произведенных в рамках Project i. Автомобили BMW i продаются отдельно от BMW или Mini . Первые две модели серийного производства - это Mega City Vehicle (аккумуляторная электрическая ) BEV (аккумуляторная электрическая ), теперь называемая BMW i3, и подключаемый гибрид под названием BMW i8, который является серийной версией концепта Vision Efficient Dynamics , представленного на Франкфуртском автосалоне в 2009 году, и имеет полностью электрический запас хода 50 километров (31 миль). Производство обоих электромобилей планировалось начать в Лейпциге в 2013 году.
+
+            </p>
+            <a href="electro.html">посмотреть</a>
+        </div>
+</div>
+
+</swiper-container>
+<!-- Секция с ссылкой на историю заводов компании -->
+<section class="middle">
+    <div class="container3">
+        <h1 class="top__title3">
+            ИСТОРИЯ ДОСТИЖЕНИЙ КОМПАНИИ
+        </h1>
+        <div class="more">      
+        <a href="№">Узнайте больше</a>
+    </div>
+    </div>
+</section>
+<!-- Секция с ссылкой на историю руководителей компании -->
+<section class="senior">
+    <div class="container4">
+        <h1 class="top__title4">
+            Руководители компании
+        </h1>
+        <div class="more2">
+      
+        <a href="hr.html">Узнайте больше</a>
+    </div>
+    </div>
+</section>
+</main>
+<!-- Подвал -->
+<footer>
+ <p>Все права защищены</p>   
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

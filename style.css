@@ -1,0 +1,778 @@
+html {
+     /* Учитывает расстояние верстки и тегов */
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    /* Учитывает расстояние верстки и тегов*/
+    box-sizing: inherit;
+}
+
+a{
+    /* Убирает подчеркивание у ссылок */
+    text-decoration: none;
+    /* inheit наследует цвет у родителя */
+    color:inherit;
+}
+
+
+button{
+    padding: 0;
+    border:none;
+    background-color: transparent;
+}
+
+
+ul{
+    /* Убирает точки у текста */
+    list-style: none;
+}
+
+.container{
+    /* Максимальная ширина */
+    max-width: 1200px;
+    /* Фиксированная ширина */
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body {
+    /* Цвет и размер текста на сайте */
+color:#383636;
+font-size: 20px;
+font-weight: 300;
+/* Стили шрифтов текста */
+font-family: 'Cormorant Upright', serif;
+font-family: 'Open Sans', sans-serif;
+margin: 0;
+position: relative;
+}
+
+header{
+    /* Высота навигации */
+    max-height: 10px;  
+}
+
+/* FIXED HEADER (Зафиксированная навигация) */
+.header_fixed {
+    width: 100%;
+    position: fixed;
+    max-height: 60px;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 253, 253);
+    animation-name: header;
+    animation-duration: .2s;
+
+}
+
+@keyframes header {
+    0%{
+        opacity: 0;
+        top: -100px;
+
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.header__inner{
+    display: flex;
+    /* расспределение контента внутри */
+    justify-content: space-between;
+    /* Выравниет элементы по центру */
+    align-items: center;
+    min-height: 10px;
+} 
+
+/* Подменю автомобилей навигации */
+nav ul li ul {
+    
+    margin-left: 600px;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    border-color: #fff;
+    display: none;
+    color: #050505;
+    background-color:white ;
+ 
+   
+}
+
+nav ul li ul {
+    width: 40%;
+
+}
+
+nav ul li ul li ul {
+    left: 180px;
+    top: 0;
+}
+
+nav ul li:hover > ul {
+    display: initial;
+}
+
+
+
+
+/* Навигация при ширине меньше 1000px  */
+.menu__btn{
+    display: none;
+    width: 69px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+/* Картинка поиска по странице */
+.mobile-actions__link img {
+    width: 20px;
+}
+
+
+/* Класс крестика закрытия мобильного меню */
+.menu__close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Картинка крестика закрытия мобильного меню */
+.menu__close-btn img {
+    width: 20px;
+ 
+}
+
+/* Скрытие крестика закрытия меню при ширине более 1000px */
+.mobile-actions, .menu__close{
+    display: none;
+}
+
+/* Кнопка меню при ширине меньше 1000px */
+.menu__btn span{
+    background-color: #000;
+    height: 2px;
+    width: 100%;
+}
+
+/* Картинка домашней страницы */
+.logo img{
+    height: 30px;
+    width: 30px;
+}
+
+/* Дизайн меню */
+.menu__list{
+    display: flex;
+    align-items: center;
+    gap:0 15px;
+    font-size:18px;
+    font-weight: 400;
+    margin-right: 55px;
+    position: relative;
+    z-index: 3;
+    
+}
+
+/* Текст меню */
+.active {
+    color: #050505;
+   
+  }
+
+/* Подсвечивание текста меню при наведении курсором */
+.active:hover {
+    color: rgb(15, 95, 216);
+    text-underline-offset: 20px;
+    text-decoration: underline;
+    text-decoration-color: rgb(15, 95, 216);
+    text-underline-offset: 7px;
+    text-decoration-thickness: 4px;
+  
+    /* «Нулевая» позиция установлена по нижней границе блока */
+    text-underline-position: under;
+}
+ 
+
+/* Размер и положение элементов меню */
+.user-actions{
+    display: flex;
+    align-items: center;
+    /* Определяет расстояние между текстом */
+    gap:0 15px;
+  
+}
+
+/* Размер картинки поиска */
+.user-actions img{
+    height: 30px;
+    width: 30px;
+}
+/* Расстояние картинки поиска */
+.user-actions__item-search{
+    margin-right: 110px;
+}
+
+/*Элементы загаловка с текстом "История компании BMW" */
+.full-screen {
+    position: relative;
+    min-height: 94vh;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Yeseva One', cursive;
+}
+
+
+.full-screen_body {
+    padding: 50px 15px;
+    background-color: rgba(0, 0, 0, 0.61);
+position: relative;
+z-index: 2;
+display: flex;
+flex: 1 1 auto;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-transform: uppercase;
+}
+.full-screen_title {
+    font-size: 50px;
+    letter-spacing: 25px;
+    font-weight: 700;
+    margin: 0px 0px 20px 0px;
+    color: rgb(253, 255, 255);
+}
+.full-screen_text {
+    font-size: 38px;
+    letter-spacing: 15px;
+    color: rgb(253, 255, 255);
+}
+
+/* Ролик */
+.full-screen_video {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Кнопка перехода на страницу истории */
+.top__history a{
+    text-decoration: none;
+    display: inline-block;   
+    color: #f5f7f3;  
+    padding: 10px 20px;
+    font-family: 'Yeseva One', cursive;
+}
+
+/* Подсвечивание кнопки перехода на страницу истории */
+.top__history a:hover{
+    background-color: rgb(15, 95, 216);
+    color: #ffffff;
+}
+
+
+
+/* Текст «BMW - С удовольствием за рулем» */
+.blockquote__text{
+    text-align: center;
+    font-size: 40px;
+ max-width: 705px;
+    font-family: "cormorant";
+    margin: 150px auto;
+}
+
+
+
+
+/* Текст слайдера с автомобилями */
+.text p {
+    font-family: 'Yeseva One', cursive;
+}
+
+/* Кнопки слайдера с автомобилями */
+.text a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgb(15, 95, 216);
+    color: #f5f7f3;
+    border: 1px solid #000608;
+    padding: 10px 20px;
+margin-left: 570px;
+
+
+}
+
+/*Подсвечивание кнопок слайдера с автомобилями */
+.text a:hover{
+    background-color: #f5f7f3;
+    color: #666464;
+}
+
+/* Слайдер с автомобилями и его элементы */
+swiper-container {
+    width: 69%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+  }
+swiper-container p{
+    text-align: center;
+}
+
+swiper-container h3{
+    text-align: center;
+}
+
+
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 30%;
+    height: 30%;
+  }
+
+  /* Секция с ссылкой на историю заводов компании */
+  .middle{
+    background-image: url(images/factory.png);
+    /* Картинка на весь фон без повторения*/
+    background-repeat: no-repeat;
+    /* Картинка без повторения */
+    background-position: bottom left;
+    background-size: cover;
+    min-width: 766px;
+   min-height: 950px;
+
+}
+
+/* Тексты секции с ссылкой на историю заводов компании */
+.container3 {
+    padding-left: 10px;
+    color: #383737;
+}
+
+.container3 p {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.top__title3{
+font-size:120px;
+margin-bottom: 20px;
+max-width: 740px;
+line-height: 1;
+font-weight: 400;
+
+}
+
+
+/* Кнопка секции с ссылкой на историю заводов компании */
+.more a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgb(15, 95, 216);
+    color: #f5f7f3;
+    border: 1px solid #000608;
+    padding: 20px 50px;
+
+
+
+}
+
+.more a:hover{
+    background-color: #f5f7f3;
+    color: #666464;
+}
+
+/* Секция с ссылкой на историю руководителей компании */
+.senior{
+    background-image: url(images/senior.png);
+    /* Картинка на весь фон без повторения*/
+    background-repeat: no-repeat;
+    /* Картинка без повторения */
+    background-position: bottom left;
+    background-size: cover;
+    min-width: 166px;
+   min-height: 950px;
+   font-family: 'Yeseva One', cursive;
+}
+
+/* Тексты секции с ссылкой на историю руководителей компании */
+.container4 {
+    padding-left: 10px;
+    color: #383737;
+}
+
+.container4 p {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.top__title4{
+font-size:80px;
+margin-bottom: 20px;
+max-width: 740px;
+line-height: 1;
+font-weight: 400;
+
+}
+
+/* Кнопка секции с ссылкой на историю руководителей компании */
+.more2 a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgb(15, 95, 216);
+    color: #f5f7f3;
+    border: 1px solid #000608;
+    padding: 20px 50px;
+
+
+
+}
+
+.more2 a:hover{
+    background-color: #f5f7f3;
+    color: #666464;
+}
+
+/* Подвал сайта */
+footer {
+    height: 200px;
+    background-color: rgb(77, 73, 73);
+}
+
+footer p {
+    padding-top: 150px;
+    padding-left: 50px;
+    color: #fff;
+    font-family: 'Yeseva One', cursive;
+}
+
+
+/* Адаптация под другие устройства  */
+@media(max-width:1366px){
+.text a {
+    margin-left: 408px;
+}
+    }
+
+
+@media(max-width:1068px){
+    /* Расстояние картинки поиска */
+    .user-actions__item-search{
+        margin-right:30px;
+    }
+
+
+/* Меню */
+    .menu{
+        margin-right:0;
+        order:-1;
+        }
+
+        /* Навигация при ширине меньше 1000px */
+        .menu__list{
+            transform: translateY(-100%);
+            margin-left: 65px;
+            position: absolute;
+            top: 0;
+            left: 150px;
+            right: 0;
+            width: 480px;
+            margin: 0 auto;
+            background-color: #fff;
+            display: block;
+            text-align: center;
+            padding-top: 60px;
+            transition: transform .5s ease;
+        }
+
+        .menu__list.menu__list--open{
+            transform: translateY(0%);
+        }
+    .menu__item{
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-family:'cormorant', serif;
+    }
+   
+    .mobile-actions, .menu__close{
+        display: block;
+    }
+
+    nav ul li ul {
+    
+        margin-left: 200px;
+        margin-top: 20px;
+        position: absolute;
+        left: 0;
+        width: 270px;
+        border-color: #fff;
+        display: none;
+        color: #050505;
+        background-color:white ;
+        font-size: 30px;
+     
+       
+    }
+
+    .logo {
+        margin-top: 10px;
+        margin-left: 468px;
+    }
+    
+
+    .header__inner{
+        min-height:auto; 
+    }
+
+    .blockquote__text{
+        margin-top: 120px;
+        margin-bottom: 135px;
+    }
+  
+    .menu__btn{
+        display: flex;
+    }
+
+    .full-screen {
+        width:1068px;
+    }
+
+    
+
+
+swiper-container {
+    width: 90%;
+    height: 90%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+  
+  }
+
+ .text a {
+    margin-left: 350px;
+ }
+
+ .middle {
+    width: 1068px;
+ }
+
+ .senior {
+    width: 1068px;
+ }
+
+ footer {
+    width: 1068px;
+ }
+
+}
+
+@media(max-width:860px){
+
+    .menu__btn{
+        display: flex;
+    }
+    .menu{
+        order:-1;
+        margin-right: 0;
+    }
+
+    .menu__list{
+        left: 10px;
+    }
+
+.full-screen {
+    width: 1068px;
+}
+.text a {
+    margin-left: 270px;
+ }        
+
+}
+
+@media(max-width:768px){
+.header__inner{
+    padding-left: 64px;
+    padding-right: 64px;
+} 
+
+.full-screen {
+    width: 1065px;
+}
+
+.blockquote__text{
+    max-width: 640px;
+    margin-left: 135px;
+    width: 100%;
+}
+
+swiper-container {
+    width: 120%;
+    height: 100%;
+margin-left: 30px;
+margin-top: 50px;
+  }
+
+ .text a {
+    margin-left: 345px;
+  }
+
+  swiper-slide img {
+    width: 50px;
+  }
+
+ .middle{
+    
+ 
+    /* Картинка на весь фон без повторения*/
+    background-repeat: no-repeat;
+    /* Картинка без повторения */
+    background-position: bottom left;
+    background-size: cover;
+    min-width: 1005px;
+   min-height: 800px;
+
+
+
+}
+
+footer {
+width: 1068px;  
+}
+}
+
+@media(max-width:680px){
+    .container{
+        padding-left: 50px;
+
+    }
+    .header__inner{
+        padding-left: 0;
+        padding-right: 0;
+    }
+   
+    .blockquote__text{
+        font-size: 45px;
+        margin-left: 150px;
+    }
+
+ .text a {
+    margin-left: 331px;
+ }
+
+ swiper-container {
+    width: 130%;
+    height: 180%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+  
+  }
+
+ .middle{
+    
+
+    /* Картинка на весь фон без повторения*/
+    background-repeat: no-repeat;
+    /* Картинка без повторения */
+    background-position: bottom left;
+    background-size: cover;
+
+   min-height: 800px;
+
+
+
+}
+
+
+}
+
+@media(max-width:480px){
+    .menu__list{
+        width: 360px;
+        left: 250px;
+    }
+    .header__inner{
+        padding-left: 160px;
+        gap: 0 45px;
+       
+    }
+
+    .blockquote__text{
+        font-size: 45px;
+        margin-left: 150px;
+        width: 250px;
+    }
+
+    swiper-container {
+        width: 190%;
+        height: 180%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    margin-left: 20px;
+      
+      }
+      swiper-container img{
+        width: 800px;
+
+      }
+    
+ 
+     .text a {
+        margin-left: 250px;
+     }
+     .middle{
+    
+       
+        /* Картинка на весь фон без повторения*/
+        background-repeat: no-repeat;
+        /* Картинка без повторения */
+        background-position: bottom left;
+        background-size: cover;
+        min-width: 1001px;
+       min-height: 800px;
+       padding-left: 29px;
+
+    
+    }
+    footer {
+        min-width: 794px;
+        
+    }
+}
+
+@media(max-width:360px){
+
+    swiper-container {
+        width: 230%;
+      }
+
+     footer {
+        min-width: 770px;
+        
+    }
+}

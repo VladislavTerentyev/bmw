@@ -1,0 +1,508 @@
+html {
+    /* Учитывает расстояние верстки и тегов */
+   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+   /* Учитывает расстояние верстки и тегов*/
+   box-sizing: inherit;
+}
+
+a{
+   /* Убирает подчеркивание у ссылок */
+   text-decoration: none;
+   /* inheit наследует цвет у родителя */
+   color:inherit;
+}
+
+
+button{
+   padding: 0;
+   border:none;
+   background-color: transparent;
+}
+
+
+h1 {
+    margin-left: 100px;
+    font-size: 50px;
+    width: 1000px;
+}
+
+ul{
+   /* Убирает точки у текста */
+   list-style: none;
+}
+
+.container{
+   /* Максимальная ширина */
+   max-width: 1200px;
+   /* Фиксированная ширина */
+   margin: 0 auto;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+body {
+   /* Цвет и размер текста на сайте */
+color:#383636;
+font-size: 20px;
+font-weight: 300;
+/* Стили шрифтов текста */
+font-family: 'Cormorant Upright', serif;
+font-family: 'Open Sans', sans-serif;
+margin: 0;
+position: relative;
+}
+
+.header {
+    max-height: 30px;
+}
+
+/* FIXED HEADER (Зафиксированная навигация) */
+.header_fixed {
+    width: 100%;
+    position: fixed;
+    max-height: 60px;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 253, 253);
+    animation-name: header;
+    animation-duration: .2s;
+
+}
+
+@keyframes header {
+    0%{
+        opacity: 0;
+        top: -100px;
+
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.header__inner{
+    display: flex;
+    /* расспределение контента внутри */
+    justify-content: space-between;
+    /* Выравниет элементы по центру */
+    align-items: center;
+    min-height: 10px;
+} 
+
+nav ul li ul {
+   
+   margin-left: 600px;
+   margin-top: 20px;
+   position: absolute;
+   left: 0;
+   width: 30px;
+   border-color: #fff;
+   display: none;
+   color: #050505;
+   background-color:white ;
+
+  
+}
+
+nav ul li ul {
+   width: 40%;
+
+}
+
+nav ul li ul li ul {
+   left: 180px;
+   top: 0;
+}
+
+nav ul li:hover > ul {
+   display: initial;
+}
+
+
+
+.logo {
+   margin-bottom: 5px;
+}
+
+.menu__btn{
+   display: none;
+   width: 69px;
+   height: 30px;
+   flex-direction: column;
+   justify-content: space-between;
+   position: relative;
+   z-index: 2;
+}
+
+.mobile-actions__link img {
+   width: 20px;
+}
+
+.menu__close-btn img {
+   width: 20px;
+
+}
+
+.menu__close-btn{
+   position: absolute;
+   top: 20px;
+   right: 20px;
+}
+
+/* Скрытие крестика закрытия меню при ширине более 1000px */
+.mobile-actions, .menu__close{
+   display: none;
+}
+
+/* Кнопка меню при ширине меньше 1000px */
+.menu__btn span{
+   background-color: #000;
+   height: 2px;
+   width: 100%;
+}
+
+/* Картинка домашней страницы */
+.logo img{
+    height: 30px;
+    width: 30px;
+}   
+
+/* Дизайн меню */
+.menu__list{
+    display: flex;
+   gap:0 5px;
+   font-size:18px;
+   font-weight: 400;
+   margin-right: 55px;
+   position: relative;
+   z-index: 3;
+   
+}
+
+
+.active {
+   color: #050505;
+  
+ }
+
+/* Подсвечивание текста меню при наведении курсором */
+.active:hover {
+    color: rgb(15, 95, 216);
+    text-underline-offset: 20px;
+    text-decoration: underline;
+    text-decoration-color: rgb(15, 95, 216);
+    text-underline-offset: 7px;
+    text-decoration-thickness: 4px;
+  
+    /* «Нулевая» позиция установлена по нижней границе блока */
+    text-underline-position: under;
+}
+ 
+
+/* Размер и положение элементов меню */
+.user-actions{
+    display: flex;
+    align-items: center;
+    /* Определяет расстояние между текстом */
+    gap:0 15px;
+  
+}
+
+/* Размер картинки поиска */
+.user-actions img{
+    height: 30px;
+    width: 30px;
+}
+/* Расстояние картинки поиска */
+.user-actions__item-search{
+   margin-right: 110px;
+}
+
+.container{
+    /* Максимальная ширина */
+    max-width: 1200px;
+    /* Фиксированная ширина */
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Yeseva One', cursive;
+}
+
+.full-screen {
+    position: relative;
+    min-height: 97vh;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Yeseva One', cursive;
+}
+.full-screen_body {
+    padding: 50px 15px;
+    background-color: rgba(0, 0, 0, 0.61);
+position: relative;
+z-index: 2;
+display: flex;
+flex: 1 1 auto;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-transform: uppercase;
+}
+.full-screen_title {
+    font-size: 50px;
+    letter-spacing: 25px;
+    font-weight: 700;
+    margin: 0px 0px 20px 0px;
+    color: rgb(253, 255, 255);
+}
+.full-screen_text {
+    font-size: 38px;
+    letter-spacing: 15px;
+    color: rgb(253, 255, 255);
+}
+.full-screen_video {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mlogo {
+    margin-left: 50px;
+}
+
+.mlogo h1 {
+    margin-left: 200px;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+margin-top: 50px;
+  }
+swiper-container p{
+    text-align: center;
+}
+
+swiper-container h3{
+    text-align: center;
+}
+
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+  }
+
+  .text p{
+    width: 80%;
+    margin-left: 70px;
+  }
+
+.m-container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 15px;
+font-size: 18px;
+/* display: flex; */
+}
+
+.m-container p {
+width: 1100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+
+}
+   
+.top2 {
+    padding-top: 50px;
+}
+
+.mlogo img {
+    margin-left: 300px;
+    width: 500px;
+}
+
+.mlogo h1 {
+    margin-left: 300px;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    height: 200px;
+    background-color: rgb(77, 73, 73);
+    color:aliceblue
+}
+
+
+
+
+
+@media(max-width:1002px) {
+    .user-actions__item-search{
+        margin-right:30px;
+    }
+
+
+
+    .menu{
+        margin-right:0;
+        order:-1;
+        }
+
+        .menu__list{
+            transform: translateY(-100%);
+            margin-left: 65px;
+            position: absolute;
+            top: 0;
+            left: 150px;
+            right: 0;
+            width: 480px;
+            margin: 0 auto;
+            background-color: #fff;
+            display: block;
+            text-align: center;
+            padding-top: 60px;
+            transition: transform .5s ease;
+        }
+
+        .menu__list.menu__list--open{
+            transform: translateY(0%);
+        }
+    .menu__item{
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-family:'cormorant', serif;
+    }
+   
+    .mobile-actions, .menu__close{
+        display: block;
+    }
+
+    nav ul li ul {
+    
+        margin-left: 200px;
+        margin-top: 20px;
+        position: absolute;
+        left: 0;
+        width: 270px;
+        border-color: #fff;
+        display: none;
+        color: #050505;
+        background-color:white ;
+        font-size: 30px;
+     
+       
+    }
+    
+
+    .header__inner{
+        min-height:auto; 
+    }
+
+
+  
+    .menu__btn{
+        display: flex;
+    }
+
+    
+    .full-screen {
+        width: 1240px;
+    }
+
+    .m-container {
+        width: 830px;
+ 
+    }
+    swiper-container {
+        width: 1000px;
+        margin-left: 70px;
+    }
+
+    .text p {
+        width: 1000px;
+        font-size: 50px;
+    }
+
+    footer {
+    width: 1240px;
+    }
+
+}
+
+
+@media(max-width:480px){
+    .menu__list{
+        width: 360px;
+        left: 250px;
+    }
+    .header__inner{
+        padding-left: 160px;
+        gap: 0 45px;
+       
+    }
+
+    .full-screen {
+        width: 1408px;
+    }
+    .top__title{
+        font-size: 125px;
+    }
+    .top__text{
+        font-size: 35px;
+    }
+    .blockquote__text{
+        font-size: 45px;
+        margin-left: 150px;
+        width: 250px;
+    }
+
+    swiper-container {
+        width: 290%;
+        height: 180%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    margin-left: 120px;
+      
+      }
+      swiper-container img{
+        width: 900px;
+
+      }
+    
+ 
+     .text a {
+        margin-left: 250px;
+     }
+     .middle{
+    
+       
+        /* Картинка на весь фон без повторения*/
+        background-repeat: no-repeat;
+        /* Картинка без повторения */
+        background-position: bottom left;
+        background-size: cover;
+        min-width: 825px;
+       min-height: 800px;
+       padding-left: 29px;
+
+    
+    }
+    footer {
+        width: 1403px;
+        
+    }
+}
